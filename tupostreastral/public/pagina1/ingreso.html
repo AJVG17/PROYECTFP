@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/formulario.css">
+
+</head>
+
+<body>
+
+    <header class="main-header-form clearfix" role="header">
+        <div class="logo-form">
+            <a href="#"><em>Quinta</em>Villa</a>
+        </div>
+        <a href="#menu" class="menu-link-form"><i class="fa fa-bars"></i></a>
+        <nav id="menu" class="main-nav-form" role="navigation">
+            <ul class="main-menu-form">
+                <li class="has1-submenu-form"><a href="#section2">Perfil</a>
+                    <ul class="sub-menu-form">
+                        <li><a href="http://127.0.0.1:5500/login.html">Cerrar Sección</a></li>
+                </li>
+            </ul>
+
+            <li class="has-submenu-form"><a href="#section3">Funciones</a>
+                <ul class="sub2-menu-form">
+                    <li><a href="http://127.0.0.1:5500/ingreso.html#section2">Ingreso: Nuevo Contrato</a></li>
+                    <li><a href="http://127.0.0.1:5500/tabla.html">Tabla de Ingresos</a></li>
+                    
+                </ul>
+            </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="form1">
+        <form action="Nuevo contrato" id="formulario1" name="formulario1">
+
+            <div class="titulo1">
+
+                <h1 class="titulo1">Ingreso: Nuevo Contrato</h1>
+            </div>
+            <br>
+
+            <div class="propietario">
+                <li><label for="propietario">Propietario</label>
+                    <div id="listapropietarios">
+                        <select name="propietarios" required id="propietarios">
+                           <php 
+                           listarpropietarios();></php>
+    
+                            
+
+
+                        </select>
+                    </div>
+
+                </li>
+                <br>
+                <a href="">Ingresar nuevo propietario</a>
+                <br>
+            </div>
+            <br>
+
+            <div class="direccion">
+                <li><label for="dirrecion">Dirreccion de la propiedad:</label>
+                    <select name="direcciones" required id="direcciones">
+                        <option value="d1">calle32 #54-435</option>
+                        <option value="d2">carrera45 #54-342</option>
+                    </select>
+                </li>
+                <br>
+                <a href="">Ingresar nueva direccion</a>
+                <br>
+            </div>
+            <br>
+
+            <div class="name1">
+                <li><label for="name1">Nombre del Arrendatario:</label>
+                    <input type="text" name="nombre1" id="nombre1">
+                </li>
+            </div>
+            <br>
+
+            <div class="cedula1">
+                <li><label for="cedula1">Cedula Arrendatario:</label>
+                    <input type="number" name="cedula1" id="cedula1">
+                </li>
+            </div>
+            <br>
+
+            <div class="documento">
+                <label for="documento"></label>
+                <input type="file" name="documento" id="documento" accept=".pdf,.jpg,.png" multiple>
+            </div>
+            <br>
+
+            <div class="tel1">
+                <li><label for="telefono1">Numero de Contacto:</label>
+                    <input type="tel" name="telefono1" id="telefono1" min="10" max="10">
+                </li>
+            </div>
+            <br>
+
+            <div class="email1">
+                <li><label for="email1">Correo:</label>
+                    <input type="email" name="email1" id="email1">
+                </li>
+            </div>
+            <br>
+
+            <div class="name2">
+                <li><label for="name2">Nombre del Fiador:</label>
+                    <input type="text" name="name2" id="name2">
+                </li>
+            </div>
+            <br>
+
+            <div class="cedula2">
+                <li><label for="cedula2">Cedula Fiador:</label>
+                    <input type="number" name="cedula2" id="cedula2">
+                </li>
+            </div>
+            <br>
+
+            <div class="documento2">
+                <label for="documento2"></label>
+                <input type="file" name="documento2" id="documento2" accept=".pdf,.jpg,.png" multiple>
+
+            </div>
+            <br>
+
+            <div class="tel2">
+                <li><label for="telefono2">Numero de Contacto:</label>
+                    <input type="tel" name="telefono2" id="telefono2" min="10" max="10">
+                </li>
+            </div>
+            <br>
+
+            <div class="email2">
+                <li><label for="email2">Correo:</label>
+                    <input type="email" name="email2" id="email2">
+                </li>
+            </div>
+            <br>
+
+            <div class="fecha">
+                <li><label for="fechaContrato">Fecha inicio del contrato:</label>
+                    <input type="date" name="fechaContrato" id="fechaContrato">
+                </li>
+            </div>
+            <br>
+
+            <div class="contrato">
+                <li><label for="contrato">Contrato</label>
+                    <input type="file" name="contrato" id="contrato" accept=".pdf,.jpg,.png" multiple>
+                </li>
+            </div>
+            <br>
+            <br>
+
+            <div class="boton1">
+                <button type="submit" class="btn btn-primary w-100 text-uppercase fw-bold">Guardar</button>
+            </div>
+            <br>
+
+
+        </form>
+
+
+
+
+        <script src="js/jquery.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/ingreso.js"></script>
+        <script src="js/php/ingreso.php"></script>
+
+</body>
+
+</html>

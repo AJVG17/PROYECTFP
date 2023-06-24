@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow:400,500,700');
+
+* {
+  box-sizing: border-box;
+}
+
+ *::before, *::after {
+    box-sizing: border-box;
+  }
+
+
+.gallery {
+  padding: 0 0 4rem 0;
+}
+
+.img-container {
+  width: 80%;
+  height: 400px;
+  cursor: pointer;
+  overflow: hidden;}
+
+  .img-container:hover .img-content-hover {
+    display: block;
+  }
+
+
+img {
+  width: 80%;
+  height: 400px;
+  object-fit: cover;
+  transform: scale(1);
+  transition: all 0.3s ease-in-out;
+  align-items: center;
+  position: center;
+  align-content: center;
+  align-self: center;
+  
+
+
+}
+  img:hover {
+    transform: scale(1.05);
+  }
+
+
+.img-content-hover {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  display: none;
+  padding: 1rem;
+  background: #fff;
+  font-weight: 400;
+  margin-top: 1.25rem;
+  margin-left: -2rem;
+}
+
+.title {
+  color: #3c2828;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.category {
+  font-size: 1rem;
+  color: #6e5656;
+}
+
+.img-content {
+  display: none;
+}
+
+@supports (display: grid) {
+  .gallery .grid {
+    grid-gap: 1rem;
+  }
+}
+
+
+
+@media screen and (max-width: 1024px) {
+  img:hover {
+    transform: none;
+  }
+}
+  
+  .img-container {
+    height: 100%;}
+
+    .img-container:hover .img-content-hover {
+      display: none;
+    }
+  
+
+  .img-content {
+    display: block;
+    padding: 1rem 0;
+  }
